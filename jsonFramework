@@ -1,0 +1,60 @@
+'''
+Created By : Deepak JayaPrakash
+Summary : High Level Test Automation Framework using JSON to hold Test Data File
+
+Input:"TcId1"
+Output:{'name': 'Tc name 1', 'data1': ['hi', 'deepak']}
+'''
+
+import json,sys
+
+class json_py():
+    def __init__(self,jsonFilePath=None,**kwargs):
+        self.jsonData= self.__readJson(jsonFilePath)
+        
+    def get_values(self,testCaseID):
+        result_dict=self.jsonData[testCaseID][0]
+        return(result_dict)
+    
+    def __readJson(self,sPath):
+        #sTemp=self.readTxtFile({"sPath":sPath})
+        try:
+            return(json.loads(sTemp))
+        except Exception as e:
+            print("Json Validation failed.Please review json Data {}--".format(e))
+            sys.exit()
+            
+    def readTxtFile(self,*args,**kwargs):
+        sPath=kwargs["sPath"]
+        strData=None
+        try:
+            with open(sPath,"r") as F:
+                strData=F.read()
+                return strData
+        except FileNotFoundError:
+            print("Please provide correct txt file path")
+            sys.exit()
+        except ValueError:
+            print("JSON is invalid ,in the provided txt file")
+            sys.exit()
+        
+
+sTemp="""
+{
+"TcId1":[{ "name":"Tc name 1", "data1":["hi","deepak"]}],
+"TcId2":[{ "name":"some name 2", "data1":["data"]}],
+"TcId3":[{ "name":"some name 3",
+                "data1":["hi","deepak"],
+                "data2":["hi","deepak"],
+                "data3":[{"key":"value"}]
+
+}]
+}
+"""
+
+            
+o=json_py()
+print(o.get_values("TcId1"))
+
+
+
