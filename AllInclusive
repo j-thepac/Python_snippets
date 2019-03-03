@@ -1,0 +1,33 @@
+"""
+
+    a string strng
+    an array of strings arr
+
+Output of function contain_all_rots(strng, arr) (or containAllRots or contain-all-rots):
+
+    a boolean true if all rotations of strng are included in arr (C returns 1)
+    false otherwise (C returns 0)
+
+Examples:
+
+contain_all_rots(
+  "bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]) -> true
+
+contain_all_rots(
+  "Ajylvpy", ["Ajylvpy", "ylvpyAj", "jylvpyA", "lvpyAjy", "pyAjylv", "vpyAjyl", "ipywee"]) -> false)
+
+"""
+
+
+from itertools import  permutations
+
+def contain_all_rots(strng, arr):
+    l=[strng[i:]+strng[0:i] for i in range(0,len(strng)) ]
+    res=list(filter(lambda x:(x not in arr), l))
+    return(False  if len(res) > 0 else True)
+                                           
+    
+#Unit Test  
+assert(contain_all_rots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]) == True)    
+assert(contain_all_rots("XjYABhR",["TzYxlgfnhf", "yqVAuoLjMLy", "BhRXjYA", "YABhRXj", 
+                                   "hRXjYAB", "jYABhRX", "XjYABhR", "ABhRXjY"])==False)
