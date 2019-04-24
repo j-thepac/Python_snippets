@@ -1,0 +1,32 @@
+"""
+Sample Design pattern :
+A School with 2 people john and George
+"""
+
+class school():
+    def __init__(self,s):
+        self.s=s
+
+class student():
+    def __init__(self,rollno):
+        self.rollno=rollno
+        
+class boy(student):
+    def __init__(self,rollno,name):
+        super().__init__(rollno)
+        self.name=name
+        
+
+b=boy(1,"john")  
+g=boy(2,"george")   
+
+students=[b,g]
+schools=[school(students)]
+
+
+for i in schools:
+    for x in students:
+        print(x.name) 
+        
+if __name__ == '__main__':
+    pass
