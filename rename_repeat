@@ -1,0 +1,12 @@
+import re
+a=["a","b","a","b","a","b","a","b","a","b","a","b"]
+
+l=[]
+for i in a:
+    i=str(i)
+    l=l+[i]
+    if(l.count(i)>1):
+        l[-1]=l[-1]+str(len(re.findall(i,str(l))))
+print(l)
+
+#o/p : ['a', 'b', 'a2', 'b2', 'a3', 'b3', 'a4', 'b4', 'a5', 'b5', 'a6', 'b6']
