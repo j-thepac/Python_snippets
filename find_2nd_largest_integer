@@ -1,0 +1,22 @@
+
+def find_2nd_largest(arr):
+    # your code here
+    try:
+        arr=set(arr)
+        l=[i for i in arr if isinstance(i,int)]
+        l.sort(reverse=True)
+        return(l[1])
+    except:
+        return None
+def find_2nd_largest(arr):
+    # your code here
+    try:
+        arr=set(arr)
+        l=[i for i in arr if isinstance(i,int)]
+        l.sort(reverse=True)
+        return(l[1])
+    except:
+        return None
+
+assert find_2nd_largest([1,2,3])== 2
+assert(find_2nd_largest([1,1,1,1,1,1,1])== None)
