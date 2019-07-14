@@ -1,0 +1,91 @@
+"""
+Create a function, as short as possible, that returns this lyrics.
+Your code should be less than 300 characters.
+
+Baby shark, doo doo doo doo doo doo
+Baby shark, doo doo doo doo doo doo
+Baby shark, doo doo doo doo doo doo
+Baby shark!
+Mommy shark, doo doo doo doo doo doo
+Mommy shark, doo doo doo doo doo doo
+Mommy shark, doo doo doo doo doo doo
+Mommy shark!
+Daddy shark, doo doo doo doo doo doo
+Daddy shark, doo doo doo doo doo doo
+Daddy shark, doo doo doo doo doo doo
+Daddy shark!
+Grandma shark, doo doo doo doo doo doo
+Grandma shark, doo doo doo doo doo doo
+Grandma shark, doo doo doo doo doo doo
+Grandma shark!
+Grandpa shark, doo doo doo doo doo doo
+Grandpa shark, doo doo doo doo doo doo
+Grandpa shark, doo doo doo doo doo doo
+Grandpa shark!
+Let's go hunt, doo doo doo doo doo doo
+Let's go hunt, doo doo doo doo doo doo
+Let's go hunt, doo doo doo doo doo doo
+Let's go hunt!
+Run away,…
+"""
+
+
+def baby_shark_lyrics():
+    l=["Baby shark","Mommy shark","Daddy shark","Grandma shark","Grandpa shark","Let's go hunt"]
+    s2,s="doo doo doo doo doo doo\n",""
+    for i in l:
+        s=s+(i+", "+s2)*3+i+("!\n")
+    return(s+"Run away,…")
+    
+
+
+"""
+Result:
+# Imports
+import inspect
+
+# Variables
+baby_shark_code = inspect.getsource(baby_shark_lyrics)
+func_size = len(baby_shark_code)
+MAX_SIZE = 300
+
+
+# Lyrics
+babyshark = '''Baby shark, doo doo doo doo doo doo
+Baby shark, doo doo doo doo doo doo
+Baby shark, doo doo doo doo doo doo
+Baby shark!
+Mommy shark, doo doo doo doo doo doo
+Mommy shark, doo doo doo doo doo doo
+Mommy shark, doo doo doo doo doo doo
+Mommy shark!
+Daddy shark, doo doo doo doo doo doo
+Daddy shark, doo doo doo doo doo doo
+Daddy shark, doo doo doo doo doo doo
+Daddy shark!
+Grandma shark, doo doo doo doo doo doo
+Grandma shark, doo doo doo doo doo doo
+Grandma shark, doo doo doo doo doo doo
+Grandma shark!
+Grandpa shark, doo doo doo doo doo doo
+Grandpa shark, doo doo doo doo doo doo
+Grandpa shark, doo doo doo doo doo doo
+Grandpa shark!
+Let's go hunt, doo doo doo doo doo doo
+Let's go hunt, doo doo doo doo doo doo
+Let's go hunt, doo doo doo doo doo doo
+Let's go hunt!
+Run away,…'''
+
+# Header
+print('{} characters'.format(func_size))
+Test.describe("baby_shark_lyrics")
+Test.it("returns correct result for baby_shark_lyrics function")
+
+# Check
+Test.assert_equals(baby_shark_lyrics(), babyshark, "Fails, something went wrong")
+Test.assert_equals(func_size < MAX_SIZE, True, 'It should be less than {} characters. You have {}'.format(MAX_SIZE, func_size))
+
+
+PASS
+"""
