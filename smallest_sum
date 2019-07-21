@@ -1,0 +1,31 @@
+"""
+Min Sum
+Notes
+
+    Array/list will contain positives only .
+    Array/list will always has even size
+
+Explanation:
+
+    The minimum sum obtained from summing each two integers product , 5*2 + 3*4 = 22
+
+minSum({12,6,10,26,3,24}) ==> return (342)
+
+Explanation:
+
+    The minimum sum obtained from summing each two integers product , 26*3 + 24*6 + 12*10 = 342
+
+minSum({9,2,8,7,5,4,0,6}) ==> return (74)
+"""
+
+
+def min_sum(arr):
+    s=0
+    while len(arr)>0:
+        s=max(arr)*min(arr)+s
+        arr.remove(max(arr))
+        arr.remove(min(arr))
+    return(s)
+
+
+assert min_sum([9,2,8,7,5,4,0,6])==74
