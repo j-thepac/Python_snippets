@@ -1,0 +1,31 @@
+"""
+sort_odd_even
+Notes
+
+    Return an array/list where Even numbers come first then odds
+
+    Since , Men are stronger than Boys , Then Even numbers in ascending order While odds in descending .
+
+    Array/list size is at least *4*** .
+
+    Array/list numbers could be a mixture of positives , negatives .
+
+    Have no fear , It is guaranteed that no Zeroes will exists . !alt
+
+    Repetition of numbers in the array/list could occur , So (duplications are not included when separating).
+
+Input >> Output Examples:
+
+menFromBoys ({7, 3 , 14 , 17}) ==> return ({14, 17, 7, 3})
+"""
+
+def men_from_boys(arr):
+    arr=list(set(arr))
+    e = list(filter(lambda x: x % 2 == 0, arr))
+    o = list(filter(lambda x: x % 2 != 0, arr))
+    e = sorted(e)
+    o = sorted(o, reverse=True)
+    return (e + o)
+
+
+assert men_from_boys([2,15,17,15,2,10,10,17,1,1])==[2,10,17,15,1]
