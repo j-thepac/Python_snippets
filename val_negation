@@ -1,0 +1,7 @@
+def negation_value(s, val):
+    for i in s:val=not(val)
+    return val
+    
+
+
+assert (negation_value("!", True) == False)
