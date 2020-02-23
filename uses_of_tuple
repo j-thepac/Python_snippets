@@ -1,0 +1,21 @@
+#Best use of tuple
+
+#Use of Tuple
+def fn1():
+    return 1,2,3
+
+
+#Easy to unpack
+a,b,c=fn1()
+print(f"a={a}")
+
+#"_" I dont care underscore operator
+x,_,_=fn1()
+print(f"x={x}")
+
+
+#Output
+
+"""
+a=1
+x=1"""
