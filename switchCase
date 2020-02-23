@@ -1,0 +1,13 @@
+
+#Implementation of simple switch case in Python
+def fn1():
+    print("fn1")
+
+def fn2():
+    print("fn2")
+
+s={
+    "case1":fn1,
+    "case2":fn2
+}
+s["case1"]()
