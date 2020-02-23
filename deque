@@ -1,0 +1,23 @@
+from _collections import deque
+
+#deque has same commands as List and much more
+
+l=deque("a")
+print(len(l))
+
+l.append("b")
+print(l)
+
+l.appendleft("0")
+print(l)
+
+l.popleft()
+print(l[0])
+
+"""Output
+1
+deque(['a', 'b'])
+deque(['0', 'a', 'b'])
+a
+
+"""

@@ -1,0 +1,78 @@
+"""
+OCP - Open Closed Principle
+Open for expansion but closed for modification
+
+Goal : Instead of modifing existing class , your are encouraged to create a new class to solve the problem
+
+Summary : To select object from a list of objects based on the properties
+
+Description :
+Assume you have a box containing objects .You job is to select an object based on the properties like size and color . Here number of objects , size and color can be of any number .You have to print
+True for object which satisfies all the properties mentioned using Open Closed Principle.
+
+Solution:
+1. you can select an object by size or color .Eg: small
+2. You can select object by both size and color . Eg: small and red
+
+Steps:
+1. Start by creating classes which selects an object based on 1 property
+2. If u have 2 property create 2 classes
+3. For combination create last class which takes above 2 class objects as input
+
+"""
+
+
+from enum import Enum
+class COLOR(Enum):
+    black="BLACK"
+    white="WHITE"
+
+class SIZE(Enum):
+    big="BIG"
+    small="small"
+
+class Product():
+    def __init__(self,color,size):
+        self.color=color
+        self.size=size
+
+class match():
+    def test(self,obj1,obj2):
+        pass
+
+class color_match(match):
+    def __init__(self,color):
+        self.color=color
+
+    def test(self,target):
+        return self.color==target.color
+
+class size_match(match):
+    def __init__(self,size):
+        self.size=size
+
+    def test(self,target):
+        return self.size==target.size
+
+class And_operation():
+    def __init__(self,match1,match2):
+        self.match1=match1
+        self.match2=match2
+
+    def test(self,target):
+        return self.match1.test(target) and self.match2.test(target)
+
+
+pen=Product(COLOR.black.value, SIZE.small.value)
+paper=Product(COLOR.white.value,SIZE.small.value)
+book=Product(COLOR.white.value,SIZE.big.value)
+
+Products=[pen,paper,book]
+Color_match=color_match(COLOR.white.value)
+Size_match=size_match(SIZE.small.value)
+
+combination=And_operation(Color_match,Size_match)
+for product in Products:
+    print(combination.test(product))
+
+
