@@ -14,7 +14,7 @@ ff
 """
 
 def any_odd(x):
-   binary=str.zfill( (bin(x))[2::],4)
+   binary="{:032b}".format(x)
    return 1 if "1" in binary[::2] else 0
 
 
@@ -22,3 +22,5 @@ def any_odd(x):
 assert(any_odd(5)== 0)#0101 ie 1234
 assert(any_odd(170)== 1)
 assert(any_odd(2)== 1)
+assert(any_odd(2)== 1)
+assert(any_odd(1024)== 0)
