@@ -1,0 +1,9 @@
+from  itertools import permutations
+def sum_arrangements(num):
+    permute = permutations(str(num))
+    return sum(list(map(lambda x:int("".join(x)),permute)))
+
+
+
+assert(sum_arrangements(123)== 1332)
+assert (sum_arrangements(1185)==99990)
