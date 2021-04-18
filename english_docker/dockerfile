@@ -1,0 +1,9 @@
+# docker build -t tag:v1 .
+# docker images
+# docker run 62c74ede025d
+
+FROM python:rc-alpine3.13
+COPY ${PWD} /home/app
+WORKDIR /home/app
+VOLUME ${PWD}:/home/app
+CMD python english.py
