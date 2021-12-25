@@ -1,4 +1,4 @@
 FROM python:3.9-slim
 COPY $PWD /home/app/
 WORKDIR /home/app/
-CMD python twooldest.py
+CMD python switchroo2.py
