@@ -10,6 +10,12 @@ Examples
 'b' and 'G' returns 0
 'B' and 'g' returns 0
 '0' and '?' returns -1
+
+docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.9-slim python checkcase.py
+docker build -t checkcase:v1 .
+
+docker-compose up
+docker-compose down
 """
 
 
