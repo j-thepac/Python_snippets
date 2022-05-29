@@ -1,0 +1,6 @@
+FROM python:3.10-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python missing.py
+
+# docker build -t missing:v1 .
