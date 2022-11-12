@@ -2,6 +2,8 @@
 
 # docker build -t revadd:v1. 
 
+#kubectl create deployment revadd --image=revadd:v1
+
 FROM python:3.10-slim
 COPY $PWD /home/apps/
 WORKDIR /home/apps
