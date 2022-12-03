@@ -3,7 +3,7 @@
 
 
 # docker build -t evenfib:v1 .
-#kubectl create deployments evenfib --image=evenfib:v1
+#kubectl create deployment evenfib --image=evenfib:v1
 
 FROM python:3.10-slim
 COPY $PWD /home/apps
