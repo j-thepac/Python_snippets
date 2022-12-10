@@ -1,0 +1,9 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.10-slim python notsecure.py
+
+#docker build -t notsecure:v1 .
+#kubectl create deployment notsecure --image=notsecure:v1
+
+FROM python:3.10-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python notsecure.py
