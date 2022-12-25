@@ -1,0 +1,11 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.10-slim python phoneword.py
+# docker build -t phoneword:v1 .
+# kubectl deployment phoneword --image=phoneword
+# kubectl get pods 
+
+# kubectl delete deployment phoneword
+
+FROM python:3.9-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python phoneword.py
