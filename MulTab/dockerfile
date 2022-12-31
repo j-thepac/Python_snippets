@@ -3,6 +3,10 @@
 #docker build -t multab:v1
 
 
+#kubectl create deployments --image=multab
+#kubectl logs 
+#kubectl delete deploymnets multab
+
 FROM python:3.10-slim
 COPY $PWD /home/apps
 WORKDIR /home/apps
