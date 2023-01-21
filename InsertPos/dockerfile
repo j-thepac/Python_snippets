@@ -6,6 +6,6 @@
 
 
 FROM python:3.11-slim
-COPY $PWD /home/apps
-WORKDIR $PWD
+COPY $PWD /home/apps/ 
+WORKDIR /home/apps/
 CMD python insertpos.py
