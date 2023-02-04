@@ -1,0 +1,9 @@
+# docker run -it -v $PWD:/home/apps  -w /home/apps -p 5000:5000 python:3.11-slim python stairs.py
+# docker build -t stairs:v1 .
+# kubectl create deployment stairs --image=stairs:v1
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python stairs.py
