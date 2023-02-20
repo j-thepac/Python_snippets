@@ -1,5 +1,6 @@
 # docker run -it -v $PWD:/home/apps -p 5000:5000 -w /home/apps python:3.11-slim python simpstr.py
 # docker build -t simpstr:v1 .
+# kubectl create deployment simpstr --image=simpstr:v1
 
 FROM python:3.11-slim
 COPY $PWD /home/apps
