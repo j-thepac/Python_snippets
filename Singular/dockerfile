@@ -6,4 +6,8 @@ WORKDIR /home/apps
 CMD python singular.py
 
 # docker build -t singular:v1 .
-# kubectl create deployment --image=singular:v1 
+# docker images 
+# kubectl create deployment singular --image=singular:v1 
+# kubectl get pods 
+# kubectl logs 
+# kubectl delete deployment singular 
