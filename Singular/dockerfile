@@ -1,0 +1,9 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python singular.py
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python singular.py
+
+# docker build -t singular:v1 .
+# kubectl create deployment --image=singular:v1 
