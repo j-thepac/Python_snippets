@@ -2,13 +2,13 @@
 
 # docker build -t paranthesis:v1 .
 
-# kubectl create deployment --image= paranthesis:v1
+# kubectl create deployment paranthesis --image=paranthesis:v1
 # kubectl get pods
 # kubectl logs 
-# kubectl delete deployment paranthesis:v1
+# kubectl delete deployment paranthesis
 
 
 FROM python:3.11-slim
-COPY $PWD:/home/apps
+COPY $PWD /home/apps
 WORKDIR /home/apps
 CMD python paranthesis.py
