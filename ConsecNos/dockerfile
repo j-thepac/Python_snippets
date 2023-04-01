@@ -2,7 +2,7 @@
 # docker build -t consec:v1 .
 # kubectl create deployment consec --image=consec:v1
 # kubectl logs 
-# kubectl delete deployment consec:v1
+# kubectl delete deployment consec
 # docker images
 # docker rmi <>
 
