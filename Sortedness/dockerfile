@@ -4,7 +4,7 @@
 # kubectl create deployment sortedness --image=sortedness:v1
 # kubectl get pods
 # kubectl logs <>
-# kubectl delete deployment sortedness:v1
+# kubectl delete deployment sortedness
 
 
 
