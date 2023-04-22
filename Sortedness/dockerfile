@@ -1,0 +1,14 @@
+# docker run -it -p 5000:5000 -w /home/apps -v $PWD:/home/apps python:3.11-slim python sortedness.py
+# docker build -t sortedness:v1 .
+
+# kubectl create deployment sortedness --image=sortedness:v1
+# kubectl get pods
+# kubectl logs <>
+# kubectl delete deployment sortedness:v1
+
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python sortedness.py
