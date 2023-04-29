@@ -1,0 +1,12 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python twoocc.py
+# docker build -t twoocc:v1 .
+# kubectle create deployment twoocc --image=twoocc:v1
+# kubectl get pods 
+# kubectl logs <id>
+# kubectl delete deployment twoocc:v1
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps 
+WORKDIR /home/apps 
+CMD python twoocc.py
