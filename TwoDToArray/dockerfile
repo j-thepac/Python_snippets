@@ -2,6 +2,10 @@
 
 # docker build -t twodtoarray:v1 .
 
+# kubectl create deployment twodtoarray --image=twodtoarray:v1 
+# kubectl get pods
+# kubectl logs <c -id>
+# kubectl delete deployment twodtoarray
 FROM python:3.11-slim
 COPY $PWD /home/apps
 WORKDIR /home/apps 
