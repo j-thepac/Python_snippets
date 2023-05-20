@@ -1,0 +1,13 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.9-slim python numexp.py
+# docker build -t numexp:v1 .
+
+# kubectl get create deployment numexp --image:numexp:v1
+# kubectl get pods
+# kubectl logs <depid>
+# kubectl delete deployment numexp
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps 
+CMD python numexp.py
