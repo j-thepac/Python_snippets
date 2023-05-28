@@ -1,0 +1,13 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps python:3.11-slim python setreduce.py
+# docker build -t setreduce:v1
+
+#kubectl create deployment setreduce --image=setreduce:v1
+#kubectl get pods
+# kubectl logs 
+# kubectl delete deployment <id>
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps 
+CMD python setreduce.py
+
