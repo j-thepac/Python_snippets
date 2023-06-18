@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>FinaArray</title>
+      <script>
+          async function fn(){
+            a1=document.getElementById("formGroupExampleInput").value;
+            a2=document.getElementById("formGroupExampleInput2").value;
+            
+            payload={method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({ arr1: a1, arr2: a2 })};
+            res= await fetch("http://localhost:4321",payload) ;
+            data= await res.json();
+            console.log(data) 
+            document.getElementById("textarea").value = data
+
+          }
+      </script>
+  </head>
+  <body>
+  <!-- Just an image -->
+
+
+
+
+
+  <div class="form-group">
+    <label for="formGroupExampleInput">arr1</label>
+    <input type="text"  id="formGroupExampleInput" placeholder="arr1">
+
+    <label for="formGroupExampleInput2">arr2</label>
+    <input type="text" id="formGroupExampleInput2" placeholder="arr2">
+  </div>
+
+    <div class="col-auto">
+      <button type="submit" onclick="fn()">Submit</button>
+    </div>
+
+
+<textarea name="myTextarea" cols="50" rows="1" minlength="10" maxlength="500" id="textarea"></textarea>
+
+
+
+</body>
+</html>
