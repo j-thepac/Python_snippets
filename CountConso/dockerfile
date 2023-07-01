@@ -4,4 +4,4 @@ FROM python:3.11-slim
 COPY $PWD /home/apps
 WORKDIR /home/apps
 RUN pip3 install flask
-CMD python countconso.py
+CMD python server.py

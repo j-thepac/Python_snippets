@@ -1,8 +1,20 @@
-
-version: "3"
+version: '3'
 services:
   app: 
-    build: 
-    ports: [4321:4321]
-    volumes: [$PWD:/home/apps]
-    
+    image: cab2e8e81dfb
+    ports: 
+      - 4321:4321
+    volumes: 
+      - $PWD:/home/apps
+    depends_on: 
+      - web
+
+  web:
+    image: nginx
+    volumes:
+      - $PWD/html:/usr/share/nginx/html
+    ports:
+      - 80:80
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80

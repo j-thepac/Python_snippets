@@ -1,0 +1,9 @@
+web:
+  image: nginx
+  volumes:
+   - $PWD:/usr/share/nginx/html
+  ports:
+   - 80:80
+  environment:
+   - NGINX_HOST=localhost
+   - NGINX_PORT=80
