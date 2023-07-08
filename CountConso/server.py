@@ -9,5 +9,10 @@ def fn():
     return str(consonant_count(str(ip)))
 
 
+@app.route("/", methods=["GET"])
+def fn2():
+    return "Working"
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=4321)
