@@ -1,0 +1,4 @@
+# docker run -v $PWD:/usr/share/nginx/html -p 80:80 nginx
+
+FROM nginx
+COPY $PWD /usr/share/nginx/html

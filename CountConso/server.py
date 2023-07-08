@@ -4,8 +4,10 @@ app=Flask(__name__)
 
 @app.route("/", methods=["POST"])
 def fn():
-    return consonant_count(request.data)
+    ip=request.data.decode('ascii')
+    print(f"input = {ip}")
+    return str(consonant_count(str(ip)))
 
 
 if __name__ == "__main__":
-    app.run(host="localhost",port=4321)
+    app.run(host="0.0.0.0",port=4321)
