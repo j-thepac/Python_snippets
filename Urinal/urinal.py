@@ -42,26 +42,26 @@ def get_free_urinals(urinals):
     # if(first==0):
 
 
+if(__name__=="__main__"):
+
+    test_cases = [
+
+            ('10001', 1),
+            ('1001', 0),
+            ('00000', 3),
+            ('0000', 2),
+            ('01000', 1),
+            ('00010', 1),
+            ('10000', 2),
+            ('1', 0),
+            ('0', 1),
+            ('10', 0),
+        
+    ]
 
 
-test_cases = [
-
-        ('10001', 1),
-        ('1001', 0),
-        ('00000', 3),
-        ('0000', 2),
-        ('01000', 1),
-        ('00010', 1),
-        ('10000', 2),
-        ('1', 0),
-        ('0', 1),
-        ('10', 0),
-    
-]
+    for urinals, expected in test_cases:
+        assert(get_free_urinals(urinals)==expected)
 
 
-for urinals, expected in test_cases:
-    assert(get_free_urinals(urinals)==expected)
-
-
-print("done")
+    print("done")

@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    image : 3b17e7f7e674
+    ports: 
+      - 4321:4321
+    volumes:
+      - $PWD:/home/apps
+    depends_on:
+      - web
+
+  web:
+    image: nginx
+    volumes: 
+      - $PWD/templates:/usr/share/nginx/html
+    ports:
+      - 80:80
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+
