@@ -1,0 +1,18 @@
+
+#docker build -t asciiende:v1 . 
+# kubectl create deployment asciiende --image=asciiende:v1
+# kubectl get pods
+# kubectl logs <pid>
+# kubectl delete deployment asciiende
+
+
+version: "3"
+services:
+  apps:
+    build: .
+    volumes: 
+      - $PWD:/home/apps
+    ports:
+      - 5000:5000
+
+  
