@@ -1,0 +1,14 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python jungerstein1.py
+
+# docker build -t junger:v1 . 
+# docker-compose up
+
+# kubectl create deployment junger --image=jungerstein:v1
+# kubectl get pods
+# kubectl logs <>
+# kubectl delete deployment <> 
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python jungerstein1.py

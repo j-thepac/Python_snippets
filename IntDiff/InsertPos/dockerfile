@@ -1,0 +1,11 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python insertpos.py
+
+# docker build -t insertpos:v1 .
+# kubectl create deployment insertpos --image=insertpos:v1
+
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps/ 
+WORKDIR /home/apps/
+CMD python insertpos.py
