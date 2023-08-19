@@ -1,5 +1,5 @@
-# Python_snippets
-tInY cOdE sNiPpEtS
+# tInY cOdE sNiPpEtS built using MicroService Based Architecture 
+1. Refer [subset](https://github.com/j-thepac/Python_snippets/tree/master/Subset)
 
 ## Requirement : Add operation
 ### Folders and Files
