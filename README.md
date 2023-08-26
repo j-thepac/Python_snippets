@@ -1,5 +1,6 @@
 # tInY cOdE sNiPpEtS built using MicroService Based Architecture 
 1. Refer [subset](https://github.com/j-thepac/Python_snippets/tree/master/Subset)
+2. Refer [IntSeq](https://github.com/j-thepac/Python_snippets/tree/master/IntSeq)
 
 ## Requirement : Add operation
 ### Folders and Files
