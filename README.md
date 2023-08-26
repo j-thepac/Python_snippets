@@ -6,7 +6,7 @@
  1. Add Folder
 	 1. python
 		 1. add.py ( GCP ) [TESTED - unit test]
-		 2. server.py	[TESTED - Canary and Integration]
+		 2. server.py	(add CORS) / [TESTED - Canary and Integration]
 		 3. requirements.txt
 		 4. dockerfile	[TESTED]
 		 5. **[templates for jinja ]
@@ -15,7 +15,10 @@
 		 2. script.js [TESTED]
 		 3. style.css [TESTED]
 		 4. dockerfile [TESTED]
-	 3. docker-compose.yml [TESTED]
+	 3. docker-compose.yml [TESTED] 
+  	 4. Start Kubernetes / MiniKube (Note : docker run ,docker-compose up will not work in Kubernetes )
+    	 5. Build Images
+      	 6. Run in Cluster  
 
 ### Sequence :
 
@@ -34,9 +37,9 @@
   		***************** TEST HERE *******
 	
 	 2025  jobs #fg , bg
-	 2026  kill %1
+	 2026  kill 1
 	 2027  jobs
-	 2029  kill %2
+	 2029  kill 9
   
 	 2030  kubectl get services
 	 2031  kubectl delete service html subset
