@@ -4,4 +4,6 @@
 FROM python:3.11-slim
 COPY $PWD /home/apps
 WORKDIR /home/apps
+EXPOSE 5000
+RUN pip3 install -r requirements.txt
 CMD python server.py
