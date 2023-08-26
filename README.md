@@ -16,6 +16,9 @@
 		 3. style.css [TESTED]
 		 4. dockerfile [TESTED]
 	 3. docker-compose.yml [TESTED]
+  	 4. Start Kubernetes / MiniKube
+    	 5. Build Images
+      	 6. Run in Cluster  
 
 ### Sequence :
 
