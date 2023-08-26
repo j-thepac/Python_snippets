@@ -1,11 +1,19 @@
-#docker-compose up
+#docker-compose up -d
 
 
 version: "3"
 services: 
   app:
-   build: .
+   image: subset:v1
    ports:
     - 5000:5000
    volumes:
-    - $PWD:/home/apps
+    - $PWD/python:/home/apps
+
+  html:
+    image: nginx
+    volumes:
+      - $PWD/html:/usr/share/nginx/html
+    ports: 
+      - 8080:80
+

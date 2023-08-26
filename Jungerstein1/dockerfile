@@ -15,6 +15,12 @@
 # kubectl logs <>
 # kubectl delete deployment <> 
 
+
+#kubectl expose deployment junger --port=4321
+#kubectl get services
+#kubectl port-forward <id> 4321:4321
+#kubectl delete service junger 
+
 FROM python:3.11-slim
 COPY . /home/apps
 WORKDIR /home/apps
