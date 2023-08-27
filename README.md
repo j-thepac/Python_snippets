@@ -1,5 +1,6 @@
 # tInY cOdE sNiPpEtS built using MicroService Based Architecture 
 1. Refer [subset](https://github.com/j-thepac/Python_snippets/tree/master/Subset)
+2. Refer [IntSeq](https://github.com/j-thepac/Python_snippets/tree/master/IntSeq)
 
 ## Requirement : Add operation
 ### Folders and Files
@@ -22,6 +23,12 @@
 
 ### Sequence :
 
+	****************Docker****************
+	# docker build -t addtest:v1 .
+	# docker run -d -p 5000:5000 addtest:v1
+	# docker exec -it <c id> bash
+	# kill 7
+ 	**************** Kubernetes ****************
 	 2011  cd html/
 	 2011  docker build -t html:v1 .
 	 2012  kubectl create deployment html --image=html:v1
@@ -33,9 +40,7 @@
 	 2020  kubectl create deployment subset --image=subset:v1
 	 2021  kubectl expose deployment subset --port=5000
 	 2023  kubectl port-forward svc/subset 5000:5000 &
-
-  		***************** TEST HERE *******
-	
+  	****************Clean up ****************
 	 2025  jobs #fg , bg
 	 2026  kill 1
 	 2027  jobs
