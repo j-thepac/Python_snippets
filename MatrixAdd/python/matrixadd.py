@@ -13,9 +13,10 @@ Visualization:
 """
 import numpy as np 
 def matrix_addition(a,b):
+    fx=np.vectorize(lambda x: int(x))
     a_np=np.array(a)
     b_np=np.array(b)
-    return (a_np+b_np).tolist()
+    return (fx(a_np)+fx(b_np)).tolist()
 
 def matrix_addition2(a,b):
     res=[]
@@ -28,14 +29,11 @@ def matrix_addition2(a,b):
 
 
 assert(matrix_addition(
-  [ [1, 2],
-    [1, 2] ],
+  [[1, 2],[1, 2]],
 
-  [ [2, 3],
-    [2, 3] ] )==
+  [[2, 3],[2, 3] ])==
 #     =
-  [ [3, 5],
-    [3, 5] ] )
+  [ [3, 5],[3, 5] ] )
 
 assert(matrix_addition(
   [ [1] ],
