@@ -1,0 +1,6 @@
+#docker build -t html:v1 .
+# docker run -d -v $PWD:/usr/share/nginx/html -p 8080:80 nginx:latest 
+
+
+FROM nginx:latest
+COPY $PWD /usr/share/nginx/html/
