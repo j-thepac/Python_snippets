@@ -9,3 +9,11 @@
 # kubectl create deployment html --image=html:v1
 # kubectl expose deployment html --port=80
 # kubectl port-forward svc/html 8080:80 &
+
+kubectl delete service html
+kubectl delete service server
+
+kubectl delete deployment html
+kubectl delete deployment server
+
+docker exec -it 

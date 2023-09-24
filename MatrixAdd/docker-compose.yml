@@ -1,7 +1,3 @@
-# docker build -t server:v1 .
-# kubectl create deployment server --image:server:v1
-# kubectl create service deployment --port=5000:5000
-# kubectl port-forward svc/server 5000:5000 &
 
 version: "3"
 services:
