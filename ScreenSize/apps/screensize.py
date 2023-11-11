@@ -10,7 +10,7 @@ Note: The calculated height should be represented as an integer. If the height i
 
 def find_screen_height(width, ratio): 
     num,den=ratio.split(":")
-    height=width*int(den)/int(num)
+    height=int(width)*int(den)/int(num)
     return (f"{width}x{int(height)}")
     
 

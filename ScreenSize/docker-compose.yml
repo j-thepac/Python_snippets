@@ -1,0 +1,12 @@
+
+version: "3"
+services:
+  apps:
+    build: apps/*
+    ports:
+      - 5000:5000
+
+  html:
+    build: templates/*
+    ports:
+      - 8080:80
