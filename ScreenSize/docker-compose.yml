@@ -2,11 +2,11 @@
 version: "3"
 services:
   apps:
-    build: apps/*
+    build: apps/.
     ports:
       - 5000:5000
 
   html:
-    build: templates/*
+    build: templates/.
     ports:
       - 8080:80
