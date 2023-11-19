@@ -1,0 +1,7 @@
+# docker build -t html:v1 .
+
+
+FROM nginx
+COPY $PWD /usr/share/nginx/html
+
+# docker run -t -p 8080:80 c1014c3820a5
