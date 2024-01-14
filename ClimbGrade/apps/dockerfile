@@ -1,0 +1,11 @@
+#docker run -it -v $PWD:/home/apps -w /home/apps python:3.11-slim python climbgrade.py
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+RUN pip3 install -r requirements.txt
+CMD python server.py
+
+
+# docker build -t climb:v1 .

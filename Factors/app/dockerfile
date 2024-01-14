@@ -5,8 +5,8 @@
 # kubectl port-forward svc/server 5000:5000 &
 
 
-
-
+# kubectl delete service server
+# kubectl delete deployment server
 
 
 FROM python:3.11-slim

@@ -1,0 +1,9 @@
+# docker build -t trick:v1 .
+# docker run -p 5000:5000 trick:v1
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+RUN pip3 install -r requirements.txt
+CMD python server.py
