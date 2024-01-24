@@ -18,9 +18,10 @@ Have fun!
 Hint: Try to write the function in a functional manner!
 """
 def share_price(invested, changes):
+    invested=int(invested)
     if(len(changes)==0): return "{:.2f}".format(invested)
     for i in changes:
-        invested=invested+(i/100 * invested)
+        invested=invested+(int(i)/100 * invested)
     return "{:.2f}".format(invested)
 
 
