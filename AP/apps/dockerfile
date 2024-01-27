@@ -1,0 +1,7 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python ap.py
+
+
+FROM python:3.11-slim
+COPY $PWD /home/apps
+WORKDIR /home/apps
+CMD python ap.py
