@@ -1,0 +1,9 @@
+# docker run -it -v $PWD:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python az.py
+# docker build -t az:v1 .
+# docker run -d -p 5000:5000 az:v1
+
+FROM python:3.11-slim
+COPY $PWD /home/apps 
+WORKDIR /home/apps
+RUN pip3 install -r requirements.txt
+CMD python server.py
