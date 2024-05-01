@@ -1,0 +1,12 @@
+
+
+#docker run -it -v $PWD:/home/apps -w /home/apps -p 8000:8000 python 
+# docker build -t cs:v1 .
+# docker run -d -p 5000:5000 cs:v1
+
+FROM python:3.11-slim
+ENV PYTHONUNBUFFERED=1
+COPY $PWD /home/apps
+WORKDIR /home/apps/ContinuesSUm 
+RUN pip3 install -r ../requirements.txt
+CMD python manage.py runserver 0.0.0.0:5000
