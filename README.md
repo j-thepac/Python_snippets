@@ -20,6 +20,22 @@
   	 4. Start Kubernetes / MiniKube (Note : docker run ,docker-compose up will not work in Kubernetes )
     	 5. Build Images
       	 6. Run in Cluster  
+### FastApi Server
+```
+from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
+app=FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+class Data(BaseModel):
+    seq:str
+
+```
 
 ### Sequence :
 
