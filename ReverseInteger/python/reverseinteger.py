@@ -36,7 +36,7 @@ class Solution:
         else: return res
 
 
-x=123
-sol=Solution()
-assert(sol.reverse(x))
-print("Done")
+# x=123
+# sol=Solution()
+# assert(sol.reverse(x))
+# print("Done")

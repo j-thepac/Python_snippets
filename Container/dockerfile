@@ -1,0 +1,8 @@
+# docker build -t container:v1 .
+
+
+FROM python:3.11-slim
+COPY . /home/apps
+WORKDIR /home/apps
+RUN pip3 install -r requirements.txt
+CMD ["python","Container/manage.py","runserver","0.0.0.0:5000"]
