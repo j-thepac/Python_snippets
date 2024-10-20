@@ -76,7 +76,7 @@ class Solution:
         return res
 
 
-num =3749
-sol=Solution()
-assert(sol.intToRoman(num)=="MMMDCCXLIX")
-print("Done")
+# num =3749
+# sol=Solution()
+# assert(sol.intToRoman(num)=="MMMDCCXLIX")
+# print("Done")
