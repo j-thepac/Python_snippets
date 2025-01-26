@@ -1,0 +1,1 @@
+# docker run -it -v .:/home/apps -w /home/apps python:3.11-slim python main.py

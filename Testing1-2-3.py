@@ -1,11 +1,12 @@
 
 
-def number(lines):
-    res=[]
-    for i,j in enumerate(lines,1):res.append("{}: {}".format(i,j))
-    return res
+#3^4
+def fn(i):
+    print(i)
+    if(i//10==0):return i
+    else:
+        return (i%10)*10+fn(i//10)
 
 
-
-assert number([])== []
-assert number(["a", "b", "c"])== ["1: a", "2: b", "3: c"]
+  
+print(fn(123))
