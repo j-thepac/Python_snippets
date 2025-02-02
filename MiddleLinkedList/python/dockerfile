@@ -1,1 +1,9 @@
 # docker run -it -v .:/home/apps -w /home/apps python:3.11-slim python main.py
+#docker build -t app:v1 .
+# docker system prune
+
+FROM python:3.11-slim
+COPY . \home\apps
+WORKDIR \home\apps
+RUN pip3 install -r requirements.txt
+CMD ["gunicorn","-w","1","-b","0.0.0.0:5000","server:app"]
