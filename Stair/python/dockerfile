@@ -1,0 +1,2 @@
+#docker run -it -p 5000:5000 -v .:/home/apps -w /home/apps python:3.11-slim python3 stair.py
+
