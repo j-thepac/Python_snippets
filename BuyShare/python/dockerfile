@@ -1,1 +1,9 @@
 # docker run -it -p 5000:5000 -v .:/home/apps -w /home/apps python:3.11-slim python buyshare.py
+# docker build -t buyshare:v1 .
+# docker run -p 5000:5000 buyshare:v1
+
+FROM python:3.11-slim
+COPY . \home\apps
+WORKDIR \home\apps
+RUN pip3 install -r requirements.txt
+CMD ["uvicorn","--reload","--host=0.0.0.0","--port=5000","server:app"]

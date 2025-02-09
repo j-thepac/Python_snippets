@@ -18,5 +18,6 @@ class Solution:
         if prices[p2] > prices[p1]: profit = profit+( prices[p2] - prices[p1])
         return profit
 
-sol=Solution()
-print(sol.maxProfit(prices =[5,2,3,2,6,6,2,9,1,0,7,4,5,0]))
+
+# sol=Solution()
+# print(sol.maxProfit(prices =[5,2,3,2,6,6,2,9,1,0,7,4,5,0]))
