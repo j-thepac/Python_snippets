@@ -1,0 +1,5 @@
+# docker build -t html:v1 .
+#docker run -d -p 8080:80 -v .:/home/apps -w /home/apps html:v1
+
+FROM nginx
+COPY . /usr/share/nginx/html
