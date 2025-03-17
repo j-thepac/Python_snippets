@@ -1,1 +1,9 @@
-docker run -it -v .:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python ksmall.py
+#docker run -it -v .:/home/apps -w /home/apps -p 5000:5000 python:3.11-slim python ksmall.py
+# docker build -t ksmall:v1 .
+# docker run -d -p 5000:5000 ksmall:v1
+
+FROM python:3.11-slim
+COPY . /home/apps
+WORKDIR /home/apps
+RUN pip3 install -r requirements.txt
+CMD ["gunicorn","-b","0.0.0.0:5000","-w","1","server:app"]
